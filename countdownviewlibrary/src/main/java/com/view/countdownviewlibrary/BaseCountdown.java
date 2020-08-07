@@ -26,6 +26,7 @@ class BaseCountdown {
     protected Paint mTimeTextPaint, mSuffixTextPaint, mMeasureHourWidthPaint;
     protected float mLeftPaddingSize;
     protected float mSuffixDayLeftMargin, mSuffixDayRightMargin;
+    protected float mSuffixMarginBottom;
     protected float mSuffixSecondLeftMargin, mSuffixSecondRightMargin;
     protected float mSuffixHourLeftMargin, mSuffixHourRightMargin;
     protected float mSuffixMinuteLeftMargin, mSuffixMinuteRightMargin;
@@ -76,6 +77,7 @@ class BaseCountdown {
         mSuffixSecond = ta.getString(R.styleable.CountdownView_suffixSecond);
         mSuffixMillisecond = ta.getString(R.styleable.CountdownView_suffixMillisecond);
         mSuffixGravity = ta.getInt(R.styleable.CountdownView_suffixGravity, 1);
+        mSuffixMarginBottom = ta.getDimension(R.styleable.CountdownView_suffixMarginBottom, 0);
         mSuffixLRMargin = ta.getDimension(R.styleable.CountdownView_suffixLRMargin, -1);
         mSuffixDayLeftMargin = ta.getDimension(R.styleable.CountdownView_suffixDayLeftMargin, -1);
         mSuffixDayRightMargin = ta.getDimension(R.styleable.CountdownView_suffixDayRightMargin, -1);
@@ -429,16 +431,16 @@ class BaseCountdown {
         switch (mSuffixGravity) {
             case 0:
                 // top
-                ret = mTimeTextBaseline - mTimeTextHeight - tempRect.top;
+                ret = mTimeTextBaseline - mTimeTextHeight - tempRect.top+mSuffixMarginBottom;
                 break;
             default:
             case 1:
                 // center
-                ret = mTimeTextBaseline - mTimeTextHeight / 2 + tempRect.height() / 2;
+                ret = mTimeTextBaseline - mTimeTextHeight / 2 + tempRect.height() / 2+mSuffixMarginBottom;
                 break;
             case 2:
                 // bottom
-                ret = mTimeTextBaseline - tempRect.bottom;
+                ret = mTimeTextBaseline - tempRect.bottom+mSuffixMarginBottom;
                 break;
         }
 

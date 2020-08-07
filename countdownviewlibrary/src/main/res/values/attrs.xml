@@ -34,6 +34,7 @@
             <enum name="center" value="1" />
             <enum name="bottom" value="2" />
         </attr>
+        <attr name="suffixMarginBottom" format="dimension"/>
         <attr name="suffixLRMargin" format="dimension" />
         <attr name="suffixDayLeftMargin" format="dimension" />
         <attr name="suffixDayRightMargin" format="dimension" />

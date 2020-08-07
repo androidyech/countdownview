@@ -135,7 +135,10 @@
             app:isShowMinute="true"
             app:isShowSecond="true"
             app:suffixGravity="center"
+            app:suffixMarginBottom="-4dp"
             app:suffixTextColor="#000000"
+            app:suffixHour="小时"
+            app:suffixMinute="分钟"
             app:suffixTextSize="17sp"
             app:timeTextColor="#000000"
             app:timeTextSize="20sp"/>
