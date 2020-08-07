@@ -562,6 +562,34 @@ public class CountdownView extends View {
         setShape();
     }
 
+
+    public void setmSuffix(String mSuffix) {
+        mCountdown.setmSuffix(mSuffix);
+    }
+
+    public void setmSuffixDay(String mSuffixDay) {
+        mCountdown.setmSuffixDay(mSuffixDay);
+    }
+
+    public void setmSuffixHour(String mSuffixHour) {
+        mCountdown.setmSuffixHour(mSuffixHour);
+    }
+
+
+    public void setmSuffixMinute(String mSuffixMinute) {
+        mCountdown.setmSuffixMinute(mSuffixMinute);
+    }
+
+    public void setmSuffixSecond(String mSuffixSecond) {
+        mCountdown.setmSuffixSecond(mSuffixSecond);
+    }
+
+    public void setmSuffixMillisecond(String mSuffixMillisecond) {
+        mCountdown.setmSuffixMillisecond(mSuffixMillisecond);
+    }
+    public void setTimes(int day, int hour, int minute, int second, int millisecond) {
+        mCountdown.setTimes(day,hour,minute,second,millisecond);
+    }
     private void setShape(){
         GradientDrawable gradientDrawable = new GradientDrawable();
         //设置矩形

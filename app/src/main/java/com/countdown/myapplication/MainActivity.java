@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
         long time22 = (long)30 * 60 * 1000;
         mCvCountdownViewTest22.start(time22);
 
-        CountdownView mCvCountdownViewTest3 = (CountdownView)findViewById(R.id.cv_countdownViewTest3);
+        final CountdownView mCvCountdownViewTest3 = (CountdownView)findViewById(R.id.cv_countdownViewTest3);
         long time3 = (long)9 * 60 * 60 * 1000;
         mCvCountdownViewTest3.start(time3);
 
@@ -102,6 +103,22 @@ public class MainActivity extends AppCompatActivity implements CountdownView.OnC
                 startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
             }
         });
+
+//        TextView test1 = findViewById(R.id.test1);
+//        test1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mCvCountdownViewTest3.setmSuffixHour("你好");
+//            }
+//        });
+//        TextView test2 = findViewById(R.id.test2);
+//        test2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mCvCountdownViewTest3.stop();
+//                mCvCountdownViewTest3.setTimes(1,1,1,1,1);
+//            }
+//        });
     }
 
     @Override

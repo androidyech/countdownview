@@ -735,6 +735,7 @@ class BaseCountdown {
         mMinute = minute;
         mSecond = second;
         mMillisecond = millisecond;
+        initialize();
     }
 
     public void reLayout() {
@@ -752,6 +753,54 @@ class BaseCountdown {
     public void setTimeTextColor(int textColor) {
         mTimeTextColor = textColor;
         mTimeTextPaint.setColor(mTimeTextColor);
+    }
+
+    public String getmSuffix() {
+        return mSuffix;
+    }
+
+    public void setmSuffix(String mSuffix) {
+        this.mSuffix = mSuffix;
+    }
+
+    public String getmSuffixDay() {
+        return mSuffixDay;
+    }
+
+    public void setmSuffixDay(String mSuffixDay) {
+        this.mSuffixDay = mSuffixDay;
+    }
+
+    public String getmSuffixHour() {
+        return mSuffixHour;
+    }
+
+    public void setmSuffixHour(String mSuffixHour) {
+        this.mSuffixHour = mSuffixHour;
+    }
+
+    public String getmSuffixMinute() {
+        return mSuffixMinute;
+    }
+
+    public void setmSuffixMinute(String mSuffixMinute) {
+        this.mSuffixMinute = mSuffixMinute;
+    }
+
+    public String getmSuffixSecond() {
+        return mSuffixSecond;
+    }
+
+    public void setmSuffixSecond(String mSuffixSecond) {
+        this.mSuffixSecond = mSuffixSecond;
+    }
+
+    public String getmSuffixMillisecond() {
+        return mSuffixMillisecond;
+    }
+
+    public void setmSuffixMillisecond(String mSuffixMillisecond) {
+        this.mSuffixMillisecond = mSuffixMillisecond;
     }
 
     public void setTimeTextBold(boolean isBold) {
