@@ -64,9 +64,7 @@ class BaseCountdown {
         isShowMinute = ta.getBoolean(R.styleable.CountdownView_isShowMinute, true);
         isShowSecond = ta.getBoolean(R.styleable.CountdownView_isShowSecond, true);
         isShowMillisecond = ta.getBoolean(R.styleable.CountdownView_isShowMillisecond, false);
-        if (ta.getBoolean(R.styleable.CountdownView_isHideTimeBackground, true)) {
-            isConvertDaysToHours = ta.getBoolean(R.styleable.CountdownView_isConvertDaysToHours, false);
-        }
+        isConvertDaysToHours = ta.getBoolean(R.styleable.CountdownView_isConvertDaysToHours, false);
         isSuffixTextBold = ta.getBoolean(R.styleable.CountdownView_isSuffixTextBold, false);
         mSuffixTextSize = ta.getDimension(R.styleable.CountdownView_suffixTextSize, Utils.sp2px(mContext, 12));
         mSuffixTextColor = ta.getColor(R.styleable.CountdownView_suffixTextColor, 0xFF000000);
